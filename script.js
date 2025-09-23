@@ -9,5 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalSlides = slides.length;
     let slideInterval = setInterval(nextSlide, 4000);
     
+    function showSlide(index) {
+      
+        slides.forEach(slide => slide.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+        
+        slides[index].classList.add('active');
+        indicators[index].classList.add('active');
+    }
+
   
 });
