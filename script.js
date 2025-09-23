@@ -50,8 +50,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    
-
-
-  
+    // Simple button hover effects
+    const buttons = document.querySelectorAll('.btn, .book-btn, .nav-arrow');
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', () => {
+            button.style.transform = 'translateY(-2px)';
+        });
+        button.addEventListener('mouseleave', () => {
+            button.style.transform = 'translateY(0)';
+        });
+    });
 });
