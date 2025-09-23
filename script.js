@@ -28,7 +28,30 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlide(currentSlide);
     }
 
+     // Navigation button events
+    nextBtn.addEventListener('click', () => {
+        clearInterval(slideInterval);
+        nextSlide();
+        slideInterval = setInterval(nextSlide, 4000);
+    });
     
+    prevBtn.addEventListener('click', () => {
+        clearInterval(slideInterval);
+        prevSlide();
+        slideInterval = setInterval(nextSlide, 4000);
+    });
+    
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            clearInterval(slideInterval);
+            currentSlide = index;
+            showSlide(currentSlide);
+            slideInterval = setInterval(nextSlide, 4000);
+        });
+    });
+
+    
+
 
   
 });
