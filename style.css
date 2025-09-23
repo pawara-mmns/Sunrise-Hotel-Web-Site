@@ -349,6 +349,107 @@ body {
     text-orientation: mixed;
 }
 
+/* About Section */
+.about {
+    padding: 100px 0;
+    background: white;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-text {
+    padding-right: 40px;
+}
+
+.about-label {
+    color: #4FC3F7;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.about-title {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.about-description {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.learn-more-btn {
+    background: transparent;
+    border: 1px solid #4FC3F7;
+    color: #4FC3F7;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.learn-more-btn:hover {
+    background: #4FC3F7;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.about-images {
+    position: relative;
+    height: 500px;
+}
+
+.about-image-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 65%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.about-image-2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 55%;
+    height: 60%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.about-image-1 img,
+.about-image-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.about-image-1:hover img,
+.about-image-2:hover img {
+    transform: scale(1.05);
+}
+
 /* Rooms Section */
 .section-title {
     text-align: center;
