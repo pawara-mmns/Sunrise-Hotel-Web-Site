@@ -866,3 +866,107 @@ body {
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     letter-spacing: 1px;
 }
+
+/* Instagram Gallery Section */
+.instagram-section {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.instagram-title {
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+    color: #333;
+    margin-bottom: 60px;
+    letter-spacing: -1px;
+}
+
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.instagram-item {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.instagram-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.instagram-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.instagram-item:hover .instagram-overlay {
+    opacity: 1;
+}
+
+.instagram-item:hover img {
+    transform: scale(1.05);
+}
+
+.instagram-icon {
+    color: white;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.instagram-item:hover .instagram-icon {
+    transform: scale(1);
+}
+
+/* Responsive Instagram Gallery */
+@media (max-width: 1024px) {
+    .instagram-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .instagram-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .instagram-title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+    
+    .instagram-section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .instagram-title {
+        font-size: 2rem;
+    }
+}
